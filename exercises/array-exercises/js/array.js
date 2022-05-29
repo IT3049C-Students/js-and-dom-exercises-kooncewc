@@ -1,3 +1,5 @@
+const { size } = require("cypress/types/lodash");
+
 class ArrayFunctions {
   /**
    * Gets the index of a specific item in an array
@@ -8,7 +10,13 @@ class ArrayFunctions {
    * indexOf([1,2,3,5,6], 3); // 2
    */
   indexOf(arr, item) {
-    return ;
+
+    const arr = Array.from(document.getElementById("problem1")).indexOf(item);
+    const el  = document.getElementById("problem2");
+
+    arr = indexof
+
+    return arr ;
   }
 
   /**
@@ -19,8 +27,13 @@ class ArrayFunctions {
    * sum([1,2,3]); // 6
    */
   sum(arr) {
+var arr = document.getElementById("problem2");
+    sums = 0;
+    for (let i = 0; i < arr.length; i += 1){
+      sums += arr[i]
+    }
     // Hint: use the reduce method
-    return ;
+    return sums ;
   }
 
   /**
@@ -33,8 +46,20 @@ class ArrayFunctions {
    * filter([1,2,3,5,6,2,4,2], 2); // [1,3,5,6,4]
    */
   filterOut(arr, item) {
-    return ;
+var arr = document.getElementById("problem1");
+var i = arr.length;
+var item = document.getElementById("problem2");
+while(i--)
+{
+if (arr[i] === item){
+arr.splice(arr.indexOf(item),1);
+
   }
+
+}
+return arr;
+}
+
 
   /**
    * Append: you should be able to add an item to the end of an array
@@ -45,6 +70,9 @@ class ArrayFunctions {
    * append([1,2,3], 4); // [1,2,3,4]
    */
   append(arr, item) {
+    var item = document.getElementById("problem2");
+    var arr = document.getElementById("problem1");
+    arr.splice(arr.length - 1);
     // hint: push, slice, splice would all work. Pay attention to the return value in the docs
     return arr;
   }
@@ -58,7 +86,11 @@ class ArrayFunctions {
    * concat([1,2,3], [4,5,6]); // [1,2,3,4,5,6]
    */
   concat(arr1, arr2) {
-    return ;
+    var arr1 = document.getElementById("problem1");
+    var arr2 = document.getElementById("problem2");
+
+    const result = arr1.concat(arr2);
+    return result;
   }
 
   /**
@@ -69,7 +101,9 @@ class ArrayFunctions {
    * square([1,2,4,5]); // [1,4,16,25]
    */
   square(arr) {
+    var arr = document.getElementById("problem1");
+const result = arr.map(x => x ** 2);
     // hint: use .map
-    return ;
+    return result;
   }
 }

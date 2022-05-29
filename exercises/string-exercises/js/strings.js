@@ -7,6 +7,10 @@ class StringFunctions {
      * capitalize('HELLO WORLD') // 'Hello world'
      */
     capitalize(input) { 
+      var input = document.getElementById("text").value;
+    const strToArr = input.split('');
+    const UpArr = strToArr.map(word => word[0].toUpperCase() + word.substring(1));
+    input = UpArr.join("");
       return input; 
     }
     /**
@@ -17,6 +21,8 @@ class StringFunctions {
      * reverse('abc') // 'cba'
      */
     reverse(input) { 
+     var input = document.getElementById("text").value;
+      input = input.split("").reverse().join("");
       return input;
     }
     /**
@@ -27,6 +33,9 @@ class StringFunctions {
      * words('hello world') // ['hello', 'world']
      */
     split(input) { 
-      return [input];
+      var input = document.getElementById("text").value;
+      const arr = input.split(' ');
+      return arr;
+
     }
 }
