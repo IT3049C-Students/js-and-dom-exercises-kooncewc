@@ -11,8 +11,8 @@ class ArrayFunctions {
    */
   indexOf(arr, item) {
 
-    const arr = Array.from(document.getElementById("problem1")).indexOf(item)
-    const el  = document.getElementById("problem2")
+    const arr = Array.from(document.getElementById("problem1")).indexOf(item);
+    const el  = document.getElementById("problem2");
 
     arr = indexof
 
@@ -27,7 +27,7 @@ class ArrayFunctions {
    * sum([1,2,3]); // 6
    */
   sum(arr) {
-var arr = document.getElementById("problem2").value;
+var arr = document.getElementById("problem2");
     sums = 0;
     for (let i = 0; i < arr.length; i += 1){
       sums += arr[i]
